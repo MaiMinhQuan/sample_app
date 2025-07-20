@@ -1,0 +1,7 @@
+<!-- filepath: app/views/microposts/index.html.erb -->
+<h1>All Microposts</h1>
+<ul>
+  <% @microposts.each do |micropost| %>
+    <li><%= micropost.content %></li>
+  <% end %>
+</ul>
