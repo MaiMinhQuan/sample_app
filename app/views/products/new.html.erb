@@ -1,0 +1,9 @@
+<h1><%= t("product_views.new_product") %></h1>
+
+<%= render "form", product: @product %>
+
+<br>
+
+<div>
+  <%= link_to t("product_views.back_to_products"), products_path %>
+</div>

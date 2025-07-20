@@ -1,0 +1,77 @@
+vi:
+  name:
+    name: "Mai Minh Quân"
+  language:
+    en: "English"
+    vi: "Tiếng Việt"
+  # Static pages
+  static_pages:
+    home:
+      introduction1: "Chào mừng bạn đến với Ứng dụng Mẫu"
+      introduction2: "Đây là trang chủ của"
+      introduction3: "Ruby on Rails Tutorial"
+      introduction4: "ứng dụng mẫu"
+      signup: "Đăng ký ngay!"
+    help:
+      title: "Trợ giúp"
+      introduction1: "Nhận trợ giúp về hướng dẫn Ruby on Rails tại"
+      introduction2: "trang trợ giúp Rails Tutorial"
+      introduction3: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
+      introduction4: "sách Ruby on Rails Tutorial"
+      introduction5: ""
+    contact:
+      title: "Liên hệ"
+      hello: "Xin chào"
+      introduction: "Đây là trang liên hệ"
+  # Header
+  header:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    login: "Đăng nhập"
+    sample_app: "Ứng dụng mẫu"
+    contact: "Liên hệ"
+
+  # Common
+  common:
+    edit: "Sửa"
+    show: "Xem"
+    delete: "Xóa"
+    confirm: "Bạn có chắc chắn?"
+    back: "Quay lại"
+    submit: "Gửi"
+    cancel: "Hủy"
+    save: "Lưu"
+    create: "Tạo"
+    update: "Cập nhật"
+
+  # Page titles
+  titles:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    about: "Thông tin"
+
+  products_controller:
+    create: "Sản phẩm đã được tạo thành công."
+    update: "Sản phẩm đã được cập nhật thành công."
+    destroy: "Sản phẩm đã được xóa thành công."
+    destroy_failed: "Xóa sản phẩm không thành công."
+    product_not_found: "Không tìm thấy sản phẩm."
+
+  product_views:
+    _form: "ngăn cản sản phẩm này được lưu:"
+    show: "Xem"
+    edit: "Sửa"
+    destroy: "Xóa"
+    show_this_product: "Xem sản phẩm này"
+    back_to_products: "Quay lại danh sách sản phẩm"
+    edit_this_product: "Sửa sản phẩm này"
+    delete_this_product: "Xóa sản phẩm này"
+    are_you_sure: "Bạn có chắc chắn không?"
+    products: "Sản phẩm"
+    editing_product: "Sửa sản phẩm"
+    name: "Tên sản phẩm"
+    no_products: "Không có sản phẩm nào"
+    new_product: "Tạo sản phẩm mới"
+
+  microposts_index:
+    title: "Bài đăng ngắn"

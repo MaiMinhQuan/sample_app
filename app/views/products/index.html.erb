@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t("product_views.products") %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t("product_views.name") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= render(@products) || t("product_views.no_products") %>
+ </tbody>
+</table>
+
+<br>
+
+<%= link_to t("product_views.new_product"), new_product_path %>

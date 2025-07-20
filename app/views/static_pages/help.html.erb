@@ -1,0 +1,17 @@
+<% provide :title, "Help" %>
+<div class="help-main">
+  <h1 class="help-title"><%= t("static_pages.help.title") %></h1>
+  <p class="help-desc">
+    <%= t("static_pages.help.introduction1") %>
+    <%= link_to Settings.help_link do %>
+      <%= t("static_pages.help.introduction2") %>
+    <% end %>
+  </p>
+  <p class="help-desc">
+    <%= t("static_pages.help.introduction3") %>
+    <%= link_to Settings.book_link do %>
+      <em><%= t("static_pages.help.introduction4") %></em>
+    <% end %>
+    <%= t("static_pages.help.introduction5") %>.
+  </p>
+</div>

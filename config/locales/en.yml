@@ -1,33 +1,78 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  name:
+    name: "Mai Minh Quan"
+  language:
+    en: "English"
+    vi: "Tiêng Việt"
+  # Static pages
+  static_pages:
+    home:
+      introduction1: "Welcome to Sample App"
+      introduction2: "This is the home page for the"
+      introduction3: "Ruby on Rails Tutorial"
+      introduction4: "sample application"
+      signup: "Sign up now!"
+    help:
+      title: "Help"
+      introduction1: "Get help on the Ruby on Rails Tutorial at the"
+      introduction2: "Rails Tutorial help page"
+      introduction3: "To get help on this sample app, see the"
+      introduction4: "Ruby on Rails Tutorial"
+      introduction5: "book"
+    contact:
+      title: "Contact"
+      hello: "Hello"
+      introduction: "This is the contact page"
+  # Navigation
+  header:
+    home: "Home"
+    help: "Help"
+    login: "Log in"
+    sample_app: "Sample App"
+    contact: "Contact"
+
+  # Common
+  common:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+    confirm: "Are you sure?"
+    back: "Back"
+    submit: "Submit"
+    cancel: "Cancel"
+    save: "Save"
+    create: "Create"
+    update: "Update"
+
+  # Page titles
+  titles:
+    home: "Home"
+    help: "Help"
+    about: "About"
+
+  products_controller:
+    create: "Product was successfully created."
+    update: "Product was successfully updated."
+    destroy: "Product was successfully destroyed."
+    destroy_failed: "Failed to destroy product."
+    product_not_found: "Product not found."
+
+  product_views:
+    _form: "prohibited this product from being saved:"
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    show_this_product: "Show this product"
+    back_to_products: "Back to Products"
+    edit_this_product: "Edit this product"
+    delete_this_product: "Delete this product"
+    are_you_sure: "Are you sure?"
+    products: "Products"
+    editing_product: "Editing Product"
+    name: "Name"
+    no_products: "No products"
+    new_product: "New Product"
+
+
+  microposts_index:
+    title: "Microposts"

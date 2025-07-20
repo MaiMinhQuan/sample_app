@@ -1,0 +1,30 @@
+.home-main {
+  background: #f5f5f5;
+  padding: 60px 0 80px 0;
+  text-align: center;
+}
+
+.home-title {
+  color: #444;
+  font-size: 3em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.home-desc {
+  color: #888;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.home-desc a {
+  color: #337ab7;
+  text-decoration: underline;
+}
+
+.home-signup {
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin-top: 10px;
+  padding: 12px 32px;
+}
