@@ -1,0 +1,12 @@
+<% provide :title, "Home" %>
+<div class="home-main">
+  <h1 class="home-title"><%= t("test.title") %></h1>
+  <p class="home-desc">
+    <%= t("static_pages.home.introduction2") %>
+    <%= link_to Settings.tutorial_link do %>
+      <%= t("static_pages.home.introduction3") %>
+    <% end %>
+    <%= t("static_pages.home.introduction4") %>.
+  </p>
+  <%= link_to t("static_pages.home.signup"), "#", class: "btn btn-primary btn-lg home-signup" %>
+</div>

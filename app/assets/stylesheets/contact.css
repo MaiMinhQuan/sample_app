@@ -1,0 +1,23 @@
+.contact-main {
+  background: #f5f5f5;
+  padding: 60px 0 80px 0;
+  text-align: center;
+}
+
+.contact-title {
+  color: #444;
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.contact-hello {
+  color: #337ab7;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.contact-desc {
+  color: #666;
+  font-size: 1.1em;
+}
