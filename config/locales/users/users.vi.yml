@@ -34,9 +34,13 @@ vi:
       edit_user: "Sửa người dùng"
       delete_user: "Xóa người dùng"
     edit:
+      update_your_profile: "Cập nhật hồ sơ của bạn"
       change: "Thay đổi"
       edit_user: "Chỉnh sửa người dùng"
       save_changes: "Lưu các thay đổi"
+    create:
+      check_email_for_activation: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."
+      welcome_message: "Chào mừng bạn đến với Ứng dụng mẫu!"
     destroy:
       delete_failed: "Xóa người dùng thất bại!"
       user_deleted: "Đã xóa người dùng!"
@@ -45,3 +49,4 @@ vi:
       you_sure: "Bạn có chắc không?"
     birthday_required: "Ngày sinh là bắt buộc để đăng ký"
     gender_required: "Vui lòng chọn giới tính"
+    check_email_for_activation: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."

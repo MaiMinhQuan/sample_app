@@ -34,9 +34,13 @@ en:
       edit_user: "Edit User"
       delete_user: "Delete User"
     edit:
+      update_your_profile: "Update your profile"
       change: "Change"
       edit_user: "Edit user"
       save_changes: "Save changes"
+    create:
+      check_email_for_activation: "Please check your email to activate your account."
+      welcome_message: "Welcome to the Sample App!"
     destroy:
       delete_failed: "Delete user failed!"
       user_deleted: "User deleted!"
@@ -45,3 +49,4 @@ en:
       you_sure: "Are you sure?"
     birthday_required: "Birthday is required for registration"
     gender_required: "Please select your gender"
+    check_email_for_activation: "Please check your email to activate your account."

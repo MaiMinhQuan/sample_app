@@ -7,6 +7,7 @@ vi:
   # Static pages
   static_pages:
     home:
+      title: "Trang chủ"
       introduction1: "Chào mừng bạn đến với Ứng dụng Mẫu"
       introduction2: "Đây là trang chủ của"
       introduction3: "Ruby on Rails Tutorial"
@@ -83,6 +84,7 @@ vi:
     users: "Người dùng"
 
   flash:
+    account_not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email để nhận liên kết kích hoạt."
     already_logged_in: "Bạn đã đăng nhập rồi!"
     cannot_edit_another_user: "Bạn không thể chỉnh sửa hồ sơ của người dùng khác!"
     not_authorized: "Bạn không được phép thực hiện hành động này!"

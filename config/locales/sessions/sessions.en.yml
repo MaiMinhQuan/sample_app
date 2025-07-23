@@ -10,3 +10,10 @@ en:
     create:
       login_success: "Login successful! Welcome back!"
     login_failed: "Login failed! Please check your email and password."
+    invalid_email_password_combination: "Invalid email/password combination"
+    flash:
+      already_logged_in: "Already logged in!"
+      cannot_edit_another_user: "You cannot edit another user's profile!"
+      not_authorized: "You are not authorized to perform this action!"
+      not_found_user: "Not found user!"
+      please_log_in: "Please log in to continue"

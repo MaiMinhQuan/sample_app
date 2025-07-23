@@ -11,9 +11,6 @@ Rails.application.routes.draw do
     get "signup", to: "users#new"
     post "signup", to: "users#create"
 
-    get "signup", to: "users#new"
-    post "signup", to: "users#create"
-
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
@@ -21,5 +18,6 @@ Rails.application.routes.draw do
     resources :users, only: %i(show index edit update destroy create)
     resources :microposts, only: [:index]
     resources :products
+    resources :account_activations, only: :edit
   end
 end
