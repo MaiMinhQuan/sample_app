@@ -1,0 +1,29 @@
+en:
+  # ActiveRecord
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank"
+              too_long: "is too long"
+            email:
+              blank: "can't be blank"
+              taken: "has already been taken"
+              invalid: "is invalid"
+            birthday:
+              blank: "can't be blank"
+              too_old: "cannot be more than %{years} years ago"
+              future_date: "cannot be in the future"
+            gender:
+              blank: "can't be blank"
+              inclusion: "is not a valid option"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        birthday: "Birthday"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        gender: "Gender"
