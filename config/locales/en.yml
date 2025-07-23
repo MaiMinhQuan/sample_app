@@ -23,13 +23,6 @@ en:
       title: "Contact"
       hello: "Hello"
       introduction: "This is the contact page"
-  # Navigation
-  header:
-    home: "Home"
-    help: "Help"
-    login: "Log in"
-    sample_app: "Sample App"
-    contact: "Contact"
 
   # Common
   common:
@@ -73,5 +66,18 @@ en:
     no_products: "No products"
     new_product: "New Product"
 
-  microposts_index:
+  microposts:
     title: "Microposts"
+
+  navigation:
+    home: "Home"
+    help: "Help"
+    contact: "Contact"
+    login: "Log in"
+    logout: "Log out"
+    signup: "Sign up"
+    sample_app: "Sample App"
+    account: "Account"
+    profile: "Profile"
+    setting: "Settings"
+    users: "Users"
