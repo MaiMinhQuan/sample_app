@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-
-  #config/routes.rb
   scope "(:locale)", locale: /en|vi/ do
-    root "microposts#index"
+    root "static_pages#home"
+
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
 
     get "static_pages/home"
     get "static_pages/help"
@@ -11,14 +13,10 @@ Rails.application.routes.draw do
     get "signup", to: "users#new"
     post "signup", to: "users#create"
 
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
-
-    resources :users, only: %i(show index edit update destroy create)
-    resources :microposts, only: [:index]
-    resources :products
-    resources :account_activations, only: :edit
+    resources :users
     resources :password_resets, only: %i(new create edit update)
+    resources :account_activations, only: :edit
+    resources :microposts, only: %i(create destroy)
+    get "translation.json", to: "translations#index"
   end
 end

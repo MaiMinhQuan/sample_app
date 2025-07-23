@@ -18,7 +18,11 @@
               <li><%= link_to t("navigation.profile"), current_user %></li>
               <li><%= link_to t("navigation.setting"), edit_user_path(current_user) %></li>
               <li class="divider"></li>
-              <li> <%= link_to t("navigation.logout"), logout_path, data: {"turbo-method": :delete} %></li>
+              <li>
+                <div class="logout-card">
+                  <%= button_to t("navigation.logout"), logout_path, method: :delete, class: "btn btn-danger btn-logout"%>
+                </div>
+              </li>
             </ul>
           </li>
         <% else %>

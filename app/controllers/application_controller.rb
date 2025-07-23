@@ -24,4 +24,12 @@ class ApplicationController < ActionController::Base
     flash[:info] = t("flash.already_logged_in")
     redirect_to root_url
   end
+
+  def logged_in_user
+    return if logged_in?
+
+    store_location
+    flash[:danger] = t("flash.please_log_in")
+    redirect_to login_url
+  end
 end

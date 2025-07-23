@@ -1,0 +1,19 @@
+vi:
+  static_pages:
+    home:
+      signup: "Đăng ký ngay!"
+      tagline_html: "Đây là trang chủ của <a href=\"%{homepage_url}\">Ruby on Rails Tutorial</a> ứng dụng mẫu."
+      title: "Trang chủ"
+      micropost_feed_heading: "Dòng bài viết nhỏ"
+      welcome: "Chào mừng đến với Sample App"
+    help:
+      title: "Trợ giúp"
+      introduction1: "Nhận trợ giúp về hướng dẫn Ruby on Rails tại"
+      introduction2: "trang trợ giúp Rails Tutorial"
+      introduction3: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
+      introduction4: "sách Ruby on Rails Tutorial"
+      introduction5: ""
+    contact:
+      title: "Liên hệ"
+      hello: "Xin chào"
+      introduction: "Đây là trang liên hệ"

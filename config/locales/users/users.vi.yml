@@ -33,6 +33,10 @@ vi:
       user_details: "Chi tiết người dùng"
       edit_user: "Sửa người dùng"
       delete_user: "Xóa người dùng"
+      created_at: "Được tạo vào:"
+      microposts_heading: "Bài viết (%{count})"
+      name: "Tên"
+      updated_at: "Cập nhật vào:"
     edit:
       update_your_profile: "Cập nhật hồ sơ của bạn"
       change: "Thay đổi"

@@ -6,7 +6,10 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   # GET /users/:id
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts,
+                              limit: Settings.pagy.page_10
+  end
 
   # GET /signup
   def new
@@ -24,6 +27,7 @@ class UsersController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
 
   # DELETE /users/:id
   def destroy
