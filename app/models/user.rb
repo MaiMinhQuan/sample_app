@@ -23,8 +23,9 @@ class User < ApplicationRecord
   validates :birthday, presence: true
   validates :gender, presence: true, inclusion: {in: GENDERS}
   validate :birthday_within_range
+  validates :password, presence: true, allow_nil: true
 
-  has_many :microposts, dependent: :destroy
+  scope :recent, -> {order(created_at: :desc)}
 
   def self.digest string
     cost = if ActiveModel::SecurePassword.min_cost
