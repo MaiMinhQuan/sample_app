@@ -90,3 +90,17 @@ en:
     not_authorized: "You are not authorized to perform this action!"
     not_found_user: "Not found user!"
     please_log_in: "Please log in to continue"
+
+  shared:
+    error_messages:
+      error:
+        one: "error"
+        other: "errors"
+      the_form_contains: "The form contains %{count} %{error_word}"
+    user_info:
+      view_my_profile: "View my profile"
+      micropost_singular: "micropost"
+      micropost_plural: "microposts"
+    micropost_form:
+      micropost_placeholder: "Compose new micropost..."
+      post_button: "Post"
