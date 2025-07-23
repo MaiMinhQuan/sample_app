@@ -12,6 +12,11 @@ en:
       gender_select_placeholder: "Select your gender"
       name: "Name"
       password: "Password"
+    _follow:
+      follow: "Follow"
+    show_follow:
+      microposts: "Microposts"
+      view_my_profile: "View my profile"
     new:
       sign_up: "Sign up"
       create_my_account: "Create my account"
@@ -54,3 +59,5 @@ en:
     birthday_required: "Birthday is required for registration"
     gender_required: "Please select your gender"
     check_email_for_activation: "Please check your email to activate your account."
+    following: "Following"
+    followers: "Followers"

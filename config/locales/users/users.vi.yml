@@ -12,6 +12,11 @@ vi:
       gender_select_placeholder: "Chọn giới tính"
       name: "Tên"
       password: "Mật khẩu"
+    _follow:
+      follow: "Theo dõi"
+    show_follow:
+      microposts: "Bài viết"
+      view_my_profile: "Xem hồ sơ của tôi"
     new:
       sign_up: "Đăng ký"
       create_my_account: "Tạo tài khoản"
@@ -54,3 +59,5 @@ vi:
     birthday_required: "Ngày sinh là bắt buộc để đăng ký"
     gender_required: "Vui lòng chọn giới tính"
     check_email_for_activation: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản."
+    following: "Đang theo dõi"
+    followers: "Người theo dõi"

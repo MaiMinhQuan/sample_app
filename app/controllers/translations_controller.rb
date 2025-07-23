@@ -3,12 +3,14 @@ class TranslationsController < ApplicationController
     translations = {
       en: {
         microposts: {
-          image_size_alert: "Maximum file size is %{max_size}MB. Please choose a smaller file."
+          image_size_alert: "Maximum file size is %<max_size>sMB.
+            Please choose a smaller file."
         }
       },
       vi: {
         microposts: {
-          image_size_alert: "Kích thước tối đa là %{max_size}MB. Vui lòng chọn tệp nhỏ hơn."
+          image_size_alert: "Kích thước tối đa là %<max_size>sMB.
+            Vui lòng chọn tệp nhỏ hơn."
         }
       }
     }
@@ -17,10 +19,10 @@ class TranslationsController < ApplicationController
     current_translations = translations[I18n.locale.to_sym] || translations[:en]
 
     # Add CORS headers to allow JavaScript to access the JSON
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Content-Type'] = 'application/json'
+    response.headers["Access-Control-Allow-Origin"] = "*"
+    response.headers["Content-Type"] = "application/json"
 
     # Return translations in the format expected by i18n-js
-    render json: { [I18n.locale.to_s => current_translations] }
+    render json: {I18n.locale.to_s => current_translations}
   end
 end
