@@ -5,3 +5,6 @@ name: "Mai Minh Quan"
 base_title: "Ruby on Rails Tutorial Sample App"
 time_format:
   user_history: "%B %d, %Y at %I:%M %p"
+digits:
+  DIGIT_3: 3
+gravatar_email: "http://gravatar.com/emails"
