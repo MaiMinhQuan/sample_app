@@ -10,6 +10,7 @@ en:
       female: "Female"
       male: "Male"
       other: "Other"
+      not_found: "User not found"
     index:
       user: "Users"
       name: "Name"
@@ -19,15 +20,5 @@ en:
       user_details: "User Details"
       edit_user: "Edit User"
       delete_user: "Delete User"
-      not_found: "User not found"
     birthday_required: "Birthday is required for registration"
     gender_required: "Please select your gender"
-
-
-  new_user:
-    sign_up: "Sign up"
-    create_my_account: "Create my account"
-    create_success: "User created successful"
-    history:
-      created_at: "Member since:"
-      updated_at: "Last updated:"
