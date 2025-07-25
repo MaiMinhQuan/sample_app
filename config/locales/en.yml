@@ -7,6 +7,7 @@ en:
   # Static pages
   static_pages:
     home:
+      title: "Home"
       introduction1: "Welcome to Sample App"
       introduction2: "This is the home page for the"
       introduction3: "Ruby on Rails Tutorial"
@@ -83,6 +84,7 @@ en:
     users: "Users"
 
   flash:
+    account_not_activated: "Account not activated. Check your email for the activation link."
     already_logged_in: "Already logged in!"
     cannot_edit_another_user: "You cannot edit another user's profile!"
     not_authorized: "You are not authorized to perform this action!"

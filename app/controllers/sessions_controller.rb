@@ -22,19 +22,25 @@ class SessionsController < ApplicationController
 
   private
   def handle_successful_login user
-    reset_session
-    log_in user
-    if params.dig(:session,
-                  :remember_me) == REMEMBER_ME_CONSTANT
-      remember(user)
+    if user.activated?
+      forwarding_url = session[:forwarding_url]
+      reset_session
+      if params.dig(:session,
+                    :remember_me) == REMEMBER_ME_CONSTANT
+        remember_cookies(user)
+      else
+        remember_session(user)
+      end
+      log_in user
+      redirect_to forwarding_url || user
     else
-      forget(user)
+      flash[:warning] = t("flash.account_not_activated")
+      redirect_to root_url, status: :see_other
     end
-    redirect_to user, status: :see_other
   end
 
   def handle_failed_login
-    flash.now[:danger] = t(".login_failed")
+    flash.now[:danger] = t(".invalid_email_password_combination")
     render :new, status: :unprocessable_entity
   end
 end

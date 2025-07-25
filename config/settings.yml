@@ -8,3 +8,4 @@ time_format:
 digits:
   DIGIT_3: 3
 gravatar_email: "http://gravatar.com/emails"
+default_from_email: "noreply@example.com"
