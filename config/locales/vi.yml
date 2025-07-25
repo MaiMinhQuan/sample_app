@@ -23,13 +23,6 @@ vi:
       title: "Liên hệ"
       hello: "Xin chào"
       introduction: "Đây là trang liên hệ"
-  # Header
-  header:
-    home: "Trang chủ"
-    help: "Trợ giúp"
-    login: "Đăng nhập"
-    sample_app: "Ứng dụng mẫu"
-    contact: "Liên hệ"
 
   # Common
   common:
@@ -73,5 +66,18 @@ vi:
     no_products: "Không có sản phẩm nào"
     new_product: "Tạo sản phẩm mới"
 
-  microposts_index:
+  microposts:
     title: "Bài đăng ngắn"
+
+  navigation:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    contact: "Liên hệ"
+    login: "Đăng nhập"
+    logout: "Đăng xuất"
+    signup: "Đăng ký"
+    sample_app: "Ứng dụng mẫu"
+    account: "Tài khoản"
+    profile: "Hồ sơ"
+    setting: "Cài đặt"
+    users: "Người dùng"
