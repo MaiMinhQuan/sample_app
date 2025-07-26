@@ -7,6 +7,7 @@ vi:
       pass_word: "Mật khẩu"
       invalid_email_password_combination: "Sai email hoặc mật khẩu"
       remember_me_on_this_computer: "Nhớ tôi trên máy này"
+      forgot_password: "Quên mật khẩu?"
     create:
       login_success: "Đăng nhập thành công! Chào mừng trở lại!"
     login_failed: "Đăng nhập thất bại! Vui lòng kiểm tra email và mật khẩu."

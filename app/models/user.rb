@@ -1,11 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
-  before_save :downcase_email
-
   enum gender: {female: 0, male: 1, other: 2}
 
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   before_save :downcase_email
   before_create :create_activation_digest
@@ -17,6 +15,8 @@ class User < ApplicationRecord
   GENDERS = %w(female male other).freeze
   USER_PERMIT = %i(name email password password_confirmation birthday
                   gender).freeze
+  PASSWORD_RESET_EXPIRATION_TIME = 2.hours
+  PASSWORD_RESET_PERMIT = %i(password password_confirmation).freeze
 
   scope :by_name, ->(name){where("name LIKE ?", "%#{name}%")}
   scope :by_email, ->(email){where("email LIKE ?", "%#{email}%")}
@@ -33,7 +33,7 @@ class User < ApplicationRecord
   validate :birthday_within_range
   validates :password, presence: true, allow_nil: true
 
-  has_many :microposts, dependent: :destroy
+  # has_many :microposts, dependent: :destroy
 
   scope :recent, ->{order(created_at: :desc)}
 
@@ -80,6 +80,20 @@ class User < ApplicationRecord
     UserMailer.account_activation(self).deliver_now
   end
 
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+                   reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < PASSWORD_RESET_EXPIRATION_TIME.ago
+  end
+
   private
 
   def downcase_email
@@ -96,10 +110,6 @@ class User < ApplicationRecord
     return unless birthday < max_age_date
 
     errors.add(:birthday, :too_old, years: MAX_AGE_YEARS)
-  end
-
-  def downcase_email
-    email.downcase!
   end
 
   def create_activation_digest

@@ -42,30 +42,23 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: host }
 
 # SMTP settings for gmail
-  # config.action_mailer.smtp_settings = {
-
-  #   user_name: '0e0189b44a6b12',
-  #   password: 'eadc8e3eac6247',
-  #   address: 'sandbox.smtp.mailtrap.io',
-  #   host: 'sandbox.smtp.mailtrap.io',
-  #   port: '2525',
-  #   # authentication: :login
-  #   # address: ENV['SMTP_ADDRESS'],
-  #   # port: ENV['SMTP_PORT'],
-  #   # user_name: ENV["GMAIL_USERNAME"],
-  #   # password: ENV["GMAIL_PASSWORD"],
-  #   authentication: "plain",
-  #   enable_starttls_auto: true,
-  # }
-
   config.action_mailer.smtp_settings = {
-    user_name: 'api',
-    password: '7889791454b6ad3952426864256f63e3',
-    address: 'live.smtp.mailtrap.io',
-    host: 'live.smtp.mailtrap.io',
-    port: '587',
-    authentication: :login
+    address: ENV['SMTP_ADDRESS'],
+    port: ENV['SMTP_PORT'],
+    user_name: ENV["GMAIL_USERNAME"],
+    password: ENV["GMAIL_PASSWORD"],
+    authentication: "plain",
+    enable_starttls_auto: true,
   }
+
+  # config.action_mailer.smtp_settings = {
+  #   user_name: 'api',
+  #   password: '7889791454b6ad3952426864256f63e3',
+  #   address: 'live.smtp.mailtrap.io',
+  #   host: 'live.smtp.mailtrap.io',
+  #   port: '587',
+  #   authentication: :login
+  # }
 
   config.action_mailer.perform_caching = false
 
