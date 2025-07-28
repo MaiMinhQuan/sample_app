@@ -6,4 +6,7 @@ vi:
       sign_up_now!: "Đăng ký ngay!"
       pass_word: "Mật khẩu"
       invalid_email_password_combination: "Sai email hoặc mật khẩu"
-    login_success: "Đăng nhập thành công! Chào mừng trở lại!"
+      remember_me_on_this_computer: "Nhớ tôi trên máy này"
+    create:
+      login_success: "Đăng nhập thành công! Chào mừng trở lại!"
+    login_failed: "Đăng nhập thất bại! Vui lòng kiểm tra email và mật khẩu."

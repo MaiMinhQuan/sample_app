@@ -5,13 +5,15 @@ class User < ApplicationRecord
 
   enum gender: {female: 0, male: 1, other: 2}
 
+  attr_accessor :remember_token
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   MAX_LENGTH_NAME = 50
   MAX_LENGTH_EMAIL = 255
   MAX_AGE_YEARS = 100
   GENDERS = %w(female male other).freeze
   USER_PERMIT = %i(name email password password_confirmation birthday
-gender).freeze
+                  gender).freeze
 
   validates :name, presence: true, length: {maximum: MAX_LENGTH_NAME}
   validates :email, presence: true,
@@ -31,6 +33,25 @@ gender).freeze
              BCrypt::Engine.cost
            end
     BCrypt::Password.create string, cost:
+  end
+
+  class << self
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+  end
+
+  def remember
+    self.remember_token = User.new_token
+    update_column :remember_digest, User.digest(remember_token)
+  end
+
+  def authenticated? remember_token
+    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  end
+
+  def forget
+    update_column :remember_digest, nil
   end
 
   private
