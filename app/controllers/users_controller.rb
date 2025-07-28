@@ -6,7 +6,10 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   # GET /users/:id
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts,
+                              limit: Settings.pagy.page_10
+  end
 
   # GET /signup
   def new
@@ -25,16 +28,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # def create
-  #   @user = User.new user_params
-  #   if @user.save
-  #     log_in @user
-  #     flash[:success] = I18n.t(".create_success")
-  #     redirect_to @user, status: :see_other
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
 
   # DELETE /users/:id
   def destroy

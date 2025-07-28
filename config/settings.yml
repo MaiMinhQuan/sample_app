@@ -7,5 +7,8 @@ time_format:
   user_history: "%B %d, %Y at %I:%M %p"
 digits:
   DIGIT_3: 3
+  DIGIT_140: 140
 gravatar_email: "http://gravatar.com/emails"
 default_from_email: "noreply@example.com"
+pagy:
+  page_10: 10

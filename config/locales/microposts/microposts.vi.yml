@@ -1,0 +1,15 @@
+vi:
+  microposts:
+    micropost:
+      posted: "Đăng vào %{time_ago} trước."
+      delete: "Xóa"
+      are_you_sure: "Bạn có chắc chắn muốn xóa bài viết này không?"
+    micropost_not_found_or_invalid: "Bài viết không tồn tại hoặc không hợp lệ."
+    must_be_a_valid_image_format: "phải là định dạng hình ảnh hợp lệ"
+    image_size_too_large: "phải nhỏ hơn %{max_size}MB"
+    image_size_alert: "Kích thước tối đa là %{max_size}. Vui lòng chọn tệp nhỏ hơn."
+    create:
+      micropost_created: "Bài viết đã được tạo!"
+    destroy:
+      micropost_deleted_success: "Bài viết đã được xóa"
+      micropost_deleted_fail: "Xóa bài viết thất bại"

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+
+  has_many :microposts, dependent: :destroy
   has_secure_password
 
   enum gender: {female: 0, male: 1, other: 2}
@@ -32,8 +34,6 @@ class User < ApplicationRecord
   validates :gender, presence: true, inclusion: {in: GENDERS}
   validate :birthday_within_range
   validates :password, presence: true, allow_nil: true
-
-  # has_many :microposts, dependent: :destroy
 
   scope :recent, ->{order(created_at: :desc)}
 
@@ -92,6 +92,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < PASSWORD_RESET_EXPIRATION_TIME.ago
+  end
+
+  def feed
+    microposts
   end
 
   private
