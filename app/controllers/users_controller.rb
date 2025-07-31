@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, only: %i(show edit update destroy)
-  before_action :logged_in_user, only: %i(index edit update destroy show)
+  before_action :logged_in_user, only: %i(index edit update destroy)
   before_action :correct_user, only: %i(edit update)
   before_action :logged_out_user, only: %i(new create)
   before_action :admin_user, only: :destroy
@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   # GET /users/:id
   def show; end
 
+  # GET /signup
   def new
     @user = User.new
   end
@@ -16,9 +17,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t(".create_success")
-      redirect_to @user, status: :see_other
+      @user.send_activation_email
+      flash[:info] = t(".check_email_for_activation")
+      redirect_to root_url, status: :see_other
     else
       render :new, status: :unprocessable_entity
     end
@@ -62,6 +63,35 @@ class UsersController < ApplicationController
     return if @user
 
     flash[:danger] = I18n.t(".not_found")
+    redirect_to root_path
+  end
+
+  def logged_in_user
+    return if logged_in?
+
+    store_location
+    flash[:danger] = t("flash.please_log_in")
+    redirect_to login_url
+  end
+
+  def logged_out_user
+    return unless logged_in?
+
+    flash[:info] = t("flash.already_logged_in")
+    redirect_to root_url
+  end
+
+  def correct_user
+    return if current_user?(@user)
+
+    flash[:danger] = t("flash.cannot_edit_another_user")
+    redirect_to root_url
+  end
+
+  def admin_user
+    return if current_user.admin?
+
+    flash[:danger] = t("flash.not_authorized")
     redirect_to root_path
   end
 
