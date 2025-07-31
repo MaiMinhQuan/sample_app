@@ -19,5 +19,6 @@ Rails.application.routes.draw do
     resources :microposts, only: [:index]
     resources :products
     resources :account_activations, only: :edit
+    resources :password_resets, only: %i(new create edit update)
   end
 end

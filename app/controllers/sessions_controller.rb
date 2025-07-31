@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-
   REMEMBER_ME_CONSTANT = "1".freeze
 
   before_action :load_user, only: [:create]
