@@ -1,0 +1,19 @@
+en:
+  static_pages:
+    home:
+      signup: "Sign up now!"
+      tagline_html: "This is the home page for the <a href=\"%{homepage_url}\">Ruby on Rails Tutorial</a> sample application."
+      title: "Home"
+      micropost_feed_heading: "Micropost Feed"
+      welcome: "Welcome"
+    help:
+      title: "Help"
+      introduction1: "Get help on the Ruby on Rails Tutorial at the"
+      introduction2: "Rails Tutorial help page"
+      introduction3: "To get help on this sample app, see the"
+      introduction4: "Ruby on Rails Tutorial"
+      introduction5: "book"
+    contact:
+      title: "Contact"
+      hello: "Hello"
+      introduction: "This is the contact page"

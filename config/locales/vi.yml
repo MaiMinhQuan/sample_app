@@ -90,3 +90,17 @@ vi:
     not_authorized: "Bạn không được phép thực hiện hành động này!"
     not_found_user: "Không tìm thấy người dùng!"
     please_log_in: "Vui lòng đăng nhập để tiếp tục"
+
+  shared:
+    error_messages:
+      error:
+        one: "lỗi"
+        other: "lỗi"
+      the_form_contains: "Form chứa %{count} %{error_word}"
+    user_info:
+      view_my_profile: "Xem hồ sơ của tôi"
+      micropost_singular: "bài viết"
+      micropost_plural: "bài viết"
+    micropost_form:
+      micropost_placeholder: "Viết bài viết mới..."
+      post_button: "Đăng"

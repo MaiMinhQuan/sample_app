@@ -47,6 +47,9 @@ gem "dotenv-rails"
 gem "faker", "2.21.0"
 gem "pagy"
 gem "rails-i18n"
+gem "image_processing", "1.12.2"
+gem "active_storage_validations", "0.9.8"
+gem "i18n-js", "3.9.2"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
