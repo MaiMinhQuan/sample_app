@@ -32,3 +32,4 @@
 /config/database.yml
 /test/*
 .env
+/storage

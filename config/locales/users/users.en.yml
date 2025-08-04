@@ -33,6 +33,10 @@ en:
       user_details: "User Details"
       edit_user: "Edit User"
       delete_user: "Delete User"
+      created_at: "Created at"
+      microposts_heading: "Microposts (%{count})"
+      name: "Name"
+      updated_at: "Updated at"
     edit:
       update_your_profile: "Update your profile"
       change: "Change"

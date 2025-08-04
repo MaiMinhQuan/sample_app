@@ -1,33 +1,38 @@
-vi:
+en:
   activerecord:
     errors:
       models:
         user:
           attributes:
             name:
-              blank: "không được để trống"
-              too_long: "quá dài (tối đa %{count} ký tự)"
+              blank: "can't be blank"
+              too_long: "is too long (maximum is %{count} characters)"
             email:
-              blank: "không được để trống"
-              taken: "đã được sử dụng"
-              invalid: "có định dạng không hợp lệ"
+              blank: "can't be blank"
+              taken: "has already been taken"
+              invalid: "is invalid"
             birthday:
-              blank: "không được để trống"
-              too_old: "không được quá %{years} năm trước"
-              future_date: "không được trong tương lai"
+              blank: "can't be blank"
+              too_old: "can't be more than %{years} years ago"
+              future_date: "can't be in the future"
             gender:
-              blank: "không được để trống"
-              inclusion: "không hợp lệ"
+              blank: "can't be blank"
+              inclusion: "is not a valid choice"
+        micropost:
+          attributes:
+            image:
+              invalid_image_format: "must be a valid image format (JPEG, GIF, or PNG)"
+              image_size_too_large: "must be smaller than %{max_size}"
     attributes:
       user:
-        name: "Tên"
+        name: "Name"
         email: "Email"
-        birthday: "Ngày sinh"
-        password: "Mật khẩu"
-        password_confirmation: "Xác nhận mật khẩu"
-        gender: "Giới tính"
+        birthday: "Birthday"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        gender: "Gender"
 
-    error_messages:
+  error_messages:
     the_form_contains: "The form contains"
     error:
       one: "error"

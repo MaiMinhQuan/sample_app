@@ -18,6 +18,11 @@ vi:
             gender:
               blank: "không được để trống"
               inclusion: "không phải là lựa chọn hợp lệ"
+        micropost:
+          attributes:
+            image:
+              invalid_image_format: "phải là định dạng ảnh hợp lệ (JPEG, GIF, hoặc PNG)"
+              image_size_too_large: "phải nhỏ hơn %{max_size}"
     attributes:
       user:
         name: "Tên"
