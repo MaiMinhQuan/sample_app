@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show edit update destroy)
-  before_action :logged_in_user, only: %i(index edit update destroy)
   before_action :correct_user, only: %i(edit update)
   before_action :logged_out_user, only: %i(new create)
   before_action :admin_user, only: :destroy
+  before_action :logged_in_user, except: %i(new create show)
+  before_action :load_user, except: %i(index new create)
 
   # GET /users/:id
   def show
@@ -27,7 +27,6 @@ class UsersController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
 
   # DELETE /users/:id
   def destroy
@@ -57,6 +56,18 @@ class UsersController < ApplicationController
     @pagy, @users = pagy User.recent
   end
 
+  def following
+    @title = t("users.following")
+    @pagy, @users = pagy @user.following, items: 10
+    render :show_follow
+  end
+
+  def followers
+    @title = t("users.followers")
+    @pagy, @users = pagy @user.followers, items: 10
+    render :show_follow
+  end
+
   private
   def user_params
     params.require(:user).permit(User::USER_PERMIT)
@@ -66,7 +77,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:danger] = I18n.t(".not_found")
+    flash[:danger] = t(".not_found")
     redirect_to root_path
   end
 

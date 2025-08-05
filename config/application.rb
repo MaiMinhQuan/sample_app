@@ -16,6 +16,6 @@ module RailsTutorial
     config.i18n.default_locale = :vi
 
     config.active_storage.variant_processor = :mini_magick
-
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
